@@ -1,0 +1,19 @@
+        <<! parte do template !>>
+
+<template>
+
+  <div class="center-screen"> // cria uma <div> que envolve todo o conteúdo da página
+
+    <h1>Bem-vindo ao Escape Room!</h1>
+
+    <p>Seu objetivo é escapar da sala resolvendo enigmas e encontrando pistas.</p>
+
+    <p>Você tem 3 minutos, para escapar! </p>
+
+    <p>Boa sorte!</p>
+
+    <button @click="$emit('start')">Iniciar o jogo</button> //quando clicar no botão, o componente emite um evento chamado start
+
+  </div>
+
+</template>

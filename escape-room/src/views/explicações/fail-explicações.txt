@@ -1,0 +1,19 @@
+           <<! parte do template !>>
+
+<template>
+
+  <div class="fail-screen"> Contêiner principal da tela de falha
+
+    <h1>Você falhou!</h1>
+
+    <p>O tempo acabou... a sala permaneceu trancada.</p>
+
+    <img id="falha" src="/imagen/falha.png" alt="falho" />
+
+    //quando clicado, o componente emite um evento chamado restart ao componente pai. 
+    //o pai (App.vue) deve ouvir esse evento para reagir (voltar à tela inicial)
+    <button @click="$emit('restart')">Tentar novamente</button>
+  
+  </div>
+
+</template>

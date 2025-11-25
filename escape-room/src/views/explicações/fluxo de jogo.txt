@@ -1,0 +1,9 @@
+Resumo geral do fluxo de jogo
+
+Jogador clica em imagens → métodos são chamados.
+
+tryFechadura1 desbloqueia com senha correta; revela a dica após 3 tentativas falhas.
+
+pegarChave habilita tryFechadura2.
+
+Quando fechadura1Destrancada && fechadura2Destrancada → botão “Sair daqui” aparece no template e finishGame() pode ser chamado para terminar o jogo.

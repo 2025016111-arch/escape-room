@@ -1,0 +1,27 @@
+        <<! parte do template !>>
+
+<template>
+
+  <Home // mostra o componente da tela inicial
+    v-if="pagina === 'home'" // só aparece quando a variável pagina tem o valor "home"
+    @start="pagina='jogo'" //quando o usuário clicar, a tela muda para "jogo"
+  />
+
+  <Game // mostra o componente game
+    v-if="pagina === 'jogo'" // só aparece quando a variável pagina tem o valor "jogo"
+    @finish="endGame"//evento disparado quando o jogador escapa, tela muda para end
+    @fail="pagina='fail'"// evento disparado quando o tempo acaba, tela muda para fail
+  />
+
+  <End // mostra o componente da tela final
+    v-if="pagina === 'fim'" //só aparece quando a variável pagina tem o valor "fim"
+    :tempo="tempoFinal"// passa para o componente o tempo final do jogador
+    @restart="pagina='home'" // se clicar em "Jogar novamente" volta para "home"
+  />
+
+  <Fail //mostra o componente da tela de falha
+    v-if="pagina === 'fail'" //só aparece quando a variável pagina tem o valor "fail"
+    @restart="pagina='home'" //se clicar em "Tentar novamente" volta para "home"
+  />
+
+</template>

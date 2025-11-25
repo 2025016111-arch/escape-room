@@ -1,0 +1,22 @@
+           <<! parte do template !>>
+
+<template>
+
+  <div class="end-screen"> // Contêiner principal da tela final
+
+    <h1>Parabéns! Você escapou!</h1>
+
+    <p>Seu tempo foi: <strong>{{ tempoFormatado }}</strong></p> //insere o valor do cronometro mm:ss em negrito
+
+    <p>Obrigado por jogar meu Escape Room.</p>
+    
+    <p>Espero que tenha se divertido!</p>
+
+    <img id="joia" src="/imagen/joinha.png" alt="joinha" />
+
+    //quando clicado, o componente emite um evento chamado restart ao componente pai. 
+    //o pai (App.vue) deve ouvir esse evento para reagir (voltar à tela inicial)
+    <button @click="$emit('restart')">Jogar novamente</button>
+
+  </div>
+</template>
