@@ -3,11 +3,11 @@
 
     <div id="timer">{{ tempoFormatado }}</div>
 
-    <img id="porta" src="/imagen/porta.png" @click="tryDoor" />
-    <img v-show="!fechadura1Destrancada" id="fechadura1" src="/imagen/fechadura1.png" @click="tryFechadura1" />
-    <img v-show="!fechadura2Destrancada" id="fechadura2" src="/imagen/fechadura2.png" @click="tryFechadura2" />
-    <img v-show="!temChave" id="chave" src="/imagen/chave.png" @click="pegarChave" />
-    <img id="papel" src="/imagen/papel.png" @click="pegarPapel" />
+    <img id="porta" src="imagen/porta.png" @click="tryDoor" />
+    <img v-show="!fechadura1Destrancada" id="fechadura1" src="imagen/fechadura1.png" @click="tryFechadura1" />
+    <img v-show="!fechadura2Destrancada" id="fechadura2" src="imagen/fechadura2.png" @click="tryFechadura2" />
+    <img v-show="!temChave" id="chave" src="imagen/chave.png" @click="pegarChave" />
+    <img id="papel" src="imagen/papel.png" @click="pegarPapel" />
 
     <button id="dica" v-show="mostrarDicaButton" @click="mostrarDica">Dica</button>
 
@@ -143,7 +143,7 @@ export default {
   width: 100%; 
   height: 100vh;
 
-  background-image: url('/imagen/escape room.png');
+  background-image: url('imagen/escape room.png');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
